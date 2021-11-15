@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Register Here!</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="card-header bg-primary text-white text-center">
+				<h3>EMPLOYEE REGISTRATION PAGE!</h3>
+			</div>
+			 <div class="card-body">
+			<form method="POST" th:action="@{/employee/save}">
+
+				NAME: <input type="text" name="empName" class="form-control">
+				 GENDER: 
+                    <input type="radio" name="empGen" value="Male"/> Male
+                    <input type="radio" name="empGen" value="Female"/> Female <br/>
+				SALARY: <input type="text" name="empSal" class="form-control">
+				EMAIL: <input type="text" name="empMail" class="form-control">
+				DEPT: <select name="empDept" class="form-control">
+					<option value="">-SELECT-</option>
+					<option value="DEV">DEV</option>
+					<option value="QA">QA</option>
+					<option value="BA">BA</option>
+				     </select>
+				<button type="submit" class="btn btn-success">CREATE</button>
+
+			</form>
+		</div>
+		<div class="card-footer bg-info text-white" th:if="${message!=null}">
+			<b>[[${message}]]</b>
+		</div>
+		<div><a href="/employee/all" aria-checked="true">All Employees</a></div>
+	</div>
+	</div>
+
+	<script>
+		$(document).ready(function () {
+			$("#empMail").change(function () {
+				$.ajax({
+					url: 'validate',
+					data: {'email': $("#empMail").val()},
+					success: function (resTxt) {
+						if (resTxt != '') {
+							$("#empMailError").show();
+							$("#empMailError").css('color', 'red');
+							$("#empMailError").html(resTxt);
+						} else {
+							$("#empMailError").hide();
+						}
+					}
+				})
+			});
+		});
+	</script>
+
+
+</body>
+
+
+</html>

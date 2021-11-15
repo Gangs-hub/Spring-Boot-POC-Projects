@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<title>Employee Data</title>
+</head>
+<body>
+<h3>EMPLOYEE DATA PAGE!</h3>
+<table border="1">
+<tr>
+ <th>ID</th>
+ <th>NAME</th>
+ <th>SAL</th>
+ <th>HRA/TA</th>
+ <th>DEPT</th>
+  <th>EMAIL</th>
+ <th>OPERATION</th>
+</tr>
+<tr th:each="ob:${employeeList}">
+<td>[[${ob.empId}]]</td>
+<td>[[${ob.empName}]]</td>
+<td>[[${ob.empSal}]]</td>
+<td>[[${ob.empHra+'/'+ob.empTa}]]</td>
+<td>[[${ob.empDept}]]</td>
+<td>[[${ob.empMail}]]</td>
+<td><a th:href="@{/employee/delete(id=${ob.empId})}">DELETE</a> | <a th:href="@{/employee/edit(id=${ob.empId})}">EDIT</a></td>
+</tr>
+
+</table>
+<div><b>[[${message}]]</b></div>
+<a href="/employee/register">Home</a>
+
+</body>
+
+</html>

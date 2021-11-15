@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Register Here!</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<h3>EMPLOYEE REGISTRATION PAGE!</h3>
+<form method="POST" th:action="@{/employee/save}">
+<pre>
+NAME: <input type="text" name="empName">
+SALARY: <input type="text" name="empSal">
+EMAIL: <input type="text" name="empMail">
+DEPT: <select name="empDept">
+      <option value="">-SELECT-</option>
+      <option value="DEV">DEV</option>
+       <option value="QA">QA</option>
+       <option value="BA">BA</option>
+      </select>
+<button type="submit">CREATE</button>      
+</pre>   
+</form>
+<div><b>[[${message}]]</b></div>
+<a href="/employee/all">All Employees</a>
+ <script>
+      $(document).ready(function () {
+          $("#empMail").change(function(){
+            $.ajax({
+                url:'validate',
+                data : {'email':$("#empMail").val()},
+                success:function(resTxt) {
+                    if(resTxt!='') {
+                        $("#empMailError").show();
+                        $("#empMailError").css('color','red');
+                        $("#empMailError").html(resTxt);
+                    } else {
+                        $("#empMailError").hide();
+                    }
+                }
+            })
+          });
+      });
+    </script>
+
+
+</body>
+
+ 
+</html>

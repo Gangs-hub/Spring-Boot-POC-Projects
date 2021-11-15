@@ -1,0 +1,7 @@
+my:
+  app:
+    driver: xml
+    url: huuu
+    userName: jio
+    password: hydrabad
+   

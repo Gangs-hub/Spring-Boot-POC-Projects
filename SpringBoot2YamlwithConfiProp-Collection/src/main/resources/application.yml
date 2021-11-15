@@ -1,0 +1,41 @@
+my:
+  app:
+    driver: Silicon
+    url: google.com
+    userName: gangs
+    password: pamp
+    list:
+     - Ganguli
+     - Rangoli
+    allSet:
+     - mySet
+     - GoalSet
+     - FamSet
+     - LifeSet
+     
+    array:
+     - 11
+     - 12
+     - 13
+     - 14
+     - 15
+     
+    map:
+     1: Hello
+     2: Bollo
+     3: Jack
+     4: Me 
+     
+    props:
+     A1: 123
+     A2: 143
+     A3: 144
+     A4: 145
+     
+    drive:
+      newDrive: BigBann Drive
+      power: 112233
+      cost: 9999.99
+      
+       
+    

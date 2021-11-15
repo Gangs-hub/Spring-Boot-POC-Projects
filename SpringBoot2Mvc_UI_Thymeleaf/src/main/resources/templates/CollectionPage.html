@@ -1,0 +1,28 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<title>ObjPage</title>
+<body>
+<p >Data is [[${anyName}]]</p>
+<table border="1">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>FEE</th>
+</tr>
+
+<tr th:each ="ob:${stdlist}">
+<td>[[${ob.sId}]]</td>
+<td>[[${ob.sName}]]</td>
+<td>[[${ob.sFee}]]</td>
+
+</tr>
+
+</table>
+<p></p>
+
+</body>
+
+</body>
+
+</head>
+

@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Data</title>
+</head>
+<body>
+<table border="1">
+<tr>
+<th>Employee Id</th>
+<th>Employee Name</th>
+<th>Employee Salary</th>
+</tr>
+
+<tr th:each="ob:${employee}"></th>
+<td>[[${ob.empId}]]</td>
+<td>[[${ob.empName}]]</td>
+<td>[[${ob.empSal}]]</td>
+</tr>
+
+
+</table>
+</body>
+
+</html>

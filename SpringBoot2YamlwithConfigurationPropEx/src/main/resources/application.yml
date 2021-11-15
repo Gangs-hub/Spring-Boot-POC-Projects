@@ -1,0 +1,6 @@
+my:
+  app:
+    driver: Oracle
+    url: xnGx
+    userName: Hijack
+    password: Hello

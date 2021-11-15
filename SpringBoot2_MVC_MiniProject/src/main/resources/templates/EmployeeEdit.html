@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Edit here!</title>
+</head>
+<body>
+<h3>Employee Edit Page!</h3>
+<form method="POST" th:action="@{/employee/update}" th:object="${employee}">
+<pre>
+ID :<input type="text" th:field="*{empId}"> 
+NAME:<input type="text" th:field="*{empName}">
+SAL:<input type="text" th:field="*{empSal}">
+Email:<input type="text" th:field="*{empMail}">
+DEPT:<select th:field="*{empDept}">
+          <option value="">-SELECT-</option>
+           <option value="DEV">DEV</option>
+            <option value="QA">QA</option>
+             <option value="BA">BA</option>
+</select>
+<button type="submit">UPDATE</button>
+</pre>
+ 
+</form>
+
+</body>
+
+</html>

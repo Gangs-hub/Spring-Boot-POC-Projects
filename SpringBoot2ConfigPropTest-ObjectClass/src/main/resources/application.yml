@@ -1,0 +1,9 @@
+my:
+  app:
+    group:
+      companyName: Microsoft
+      location: Banglore
+      companyId: 12345
+    pCode: Helloo
+    pId: 112
+    pVersion: Hacks

@@ -1,0 +1,35 @@
+spring:
+  config:
+    activate:
+      on-profile: default  
+
+app:
+  driver: MySQl
+  url: mysql:urls
+  
+
+      
+  
+---
+spring:
+  config:
+    activate:
+      on-profile: qa
+      
+
+app:
+  driver: Postgrace
+  url: Postgrace:drives  
+  
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+      
+    
+
+app:
+  driver: Oracle
+  url: Oracle:drives  
+
