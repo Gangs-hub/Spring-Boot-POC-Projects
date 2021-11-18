@@ -1,4 +1,4 @@
 # Spring-Boot-POC-Projects
-My Spring Boot Proof Of Concept(POC) Projects
+My Spring Boot 2.5.x Proof Of Concept(POC) 41-Projects
 
-My Spring boot POC projects.-41 Projects
+Topics: Spring boot core, Profiles, Email, Schedular, Data JPA, Spring MVC,Spring REST
